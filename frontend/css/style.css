@@ -1,0 +1,50 @@
+:root {
+    --earieBlack: #131515;
+    --jet: #2B2C28;
+    --middleBlueGreen: #7DE2D1;
+    --persianGreen: #339989;
+    --snow: #FFFAFB;
+
+    --baseFont: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: var(--snow);
+    font-family: var(--baseFont);
+}
+
+header {
+    padding: 10px 0;
+    background-color: var(--middleBlueGreen);
+    width: 100%;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input {
+    padding: 0.4rem 0.2rem;
+    border-color: var(--earieBlack);
+    border-radius: 3px;
+}
+
+label {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+button {
+    padding: 0.4rem 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--persianGreen);
+}

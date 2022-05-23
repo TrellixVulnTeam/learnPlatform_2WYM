@@ -1,0 +1,27 @@
+.cabecalho img {
+    height: 3rem;
+}
+
+.topicos {
+    display: flex;
+    margin: 2rem 0;
+}
+
+.topicos h6 {
+    background-color: var(--persianGreen);
+    padding: 1rem;
+    width: 20%;
+    text-align: center;
+}
+
+.coursesDisplay {
+    display: flex;
+    justify-content: space-around;
+}
+
+.coursesDisplay div {
+    background-color: var(--persianGreen);
+    padding: 1rem;
+    text-align: center;
+    width: 20%;
+}
