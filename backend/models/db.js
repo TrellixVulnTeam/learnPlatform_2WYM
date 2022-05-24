@@ -1,8 +1,10 @@
 const Sequelize = require('sequelize');
+const path = require('path');
 
 const sequelize = new Sequelize("learnplatform", "root", "Gabrielyin-323232", {
     host: 'localhost',
-    dialect: 'mysql'
+    dialect: 'sqlite',
+    storage: path.join(__dirname, '..', 'database.db')
 });
 
 sequelize.authenticate()
