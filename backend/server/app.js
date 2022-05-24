@@ -2,9 +2,11 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const User = require('../models/User');
+const cors = require('cors');
 
 const port = 3000;
 
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -15,7 +17,7 @@ app.use('/css',express.static(path.join(__dirname, '../../frontend/css')));
 //direcionando para a pagina incial
 app.get('/', async (req, res) => {
     res.sendFile(path.join(__dirname, '../../frontend/view/index.html'))
-});
+}); 
 
 //autenticando usuario no login
 app.post("/login", async (req, res) => {
@@ -33,6 +35,13 @@ app.post("/login", async (req, res) => {
             res.redirect('/');
         }
     }
+});
+
+
+app.get("/logindo", async (req, res) => {
+    const usuarios = await User.findAll();
+    res.json(usuarios);
+    console.log("hello");
 });
 
 //direcionando para pagina de cursos
