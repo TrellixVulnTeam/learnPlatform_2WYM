@@ -15,22 +15,20 @@
 <body>
     <section>
         <div class="col1">
-            <form action="/login" method="POST" class="col1__form">
-                <label for="">Username</label>
-                <input type="text" id="nome" name="nome">
-                
-                <label for="">Password</label>
-                <input type="password" id="password" name="password">
-                
-                <button id="send" type="submit">Send</button>        
-            </form>
-            <form action="/cadastrarPagina" method="GET">
-                <button type="submit">Create account</button>
-            </form>
+            <!-- <form action="/login" method="POST" class="col1__form"> -->
+            <label for="">Username</label>
+            <input type="text" id="nome" name="nome">
+            
+            <label for="">Password</label>
+            <input type="password" id="password" name="password">
+            
+            <button id="send" onclick="login()">Send</button>        
+            <button><a href="cadastro.html">Create account</a></button>
         </div>
         <div class="col2">
             <img src="../images/logo.png" alt="logo-banner">
         </div>
     </section>
+    <script src="../js/index.js"></script>
 </body>
 </html>
