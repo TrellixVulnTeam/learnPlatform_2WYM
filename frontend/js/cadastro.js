@@ -4,7 +4,7 @@ function cadastrar() {
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
             nome: document.getElementById('nome').value,
-            senha: document.getElementById('password').value,
+            password: document.getElementById('password').value,
             email: document.getElementById('email').value
         })
     }).then(res => {

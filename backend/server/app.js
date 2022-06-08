@@ -54,27 +54,23 @@ app.post("/cadastrar", async (req, res) => {
     //     senha: req.body.senha,
     //     email: req.body.email
     // })
-    console.log(req.body)
-    // console.log(req.body);
-    // const nomes = await User.findOne({ where: { nome: req.body.nome }});
-    // if (nomes === null) {
-    //     await User.create({
-    //         nome: req.body.nome,
-    //         password: req.body.password,
-    //         email: req.body.email
-    //     })
-    //     .then(() => {
-    //         console.log("Usuário cadastrado com sucesso");
-    //         res.sendFile(path.join(__dirname, '../../frontend/view/courses.html'));
-    //     }).catch((error) => {
-    //         console.log(error);
-    //         console.log("Usuário não cadastrado com sucesso");
-    //         res.redirect('/cadastrarPagina');
-    //     });    
-    // } else {
-    //     console.log('Usuário já existente');
-    //     res.redirect('/cadastrarPagina');
-    // }
+    console.log(req.body);
+    const nomes = await User.findOne({ where: { nome: req.body.nome }});
+    if (nomes === null) {
+        await User.create({
+            nome: req.body.nome,
+            password: req.body.password,
+            email: req.body.email
+        })
+        .then(() => {
+            console.log("Usuário cadastrado com sucesso");
+        }).catch((error) => {
+            console.log(error);
+            console.log("Usuário não cadastrado com sucesso");
+        });    
+    } else {
+        console.log('Usuário já existente');
+    }
 });
 
 // //direcionar para pagina de cadastro
